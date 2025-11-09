@@ -1,33 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Requirements
 
-## Getting Started
+Install Vercel CLI: `pnpm i -g vercel@latest`
 
-First, run the development server:
+## Updating
+
+Update Vercel CLI: `pnpm i -g vercel@latest`
+
+## Environment Variables
+
+Create and maintain environment variables in Vercel: https://vercel.com/sv-mueller-projects/~/settings/environment-variables
+
+Pull environment variable updates via: `vercel env pull .env.development.local`
+
+## Development
+
+Run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Docs
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The following resources are helpful understanding and making better use of the underlying technolgies:
 
-## Learn More
+- [Next.js Documentation](https://nextjs.org/docs) - Web Framework and Deployment platform
+- [React Documentation](https://react.dev/) - UI library
+- [Drizzle ORM Documentation](https://orm.drizzle.team/docs/overview) - Database ORM
+- [Neon](https://neon.com/docs/introduction) - Serverless Postgres platform with branching
+- [Better Auth](https://www.better-auth.com/docs/introduction) - Authentication framework
+- [SimpleWebAuthn](https://simplewebauthn.dev/docs/) - WebAuthn library
+- [shadcn](https://ui.shadcn.com/docs/) - Designed components that you can customize, extend, and build on.
+- [tailwindcss](https://tailwindcss.com/docs/installation/framework-guides/nextjs) - Utility-first CSS framework
+- [React Hook Form](https://react-hook-form.com/get-started) - Form validation
+- [Zod](https://zod.dev/) - Schema validation
 
-To learn more about Next.js, take a look at the following resources:
+## Database
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The database is a serververless postgress database hosted on Neon.
+There is Preview and Production branch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Drizzle Studio
+
+The database can be inspected and manipulated via Drizzle Studio.
+
+Run the following command to start Drizzle Studio: `pnpm drizzle-kit studio`
+
+Open the following link in your browser: https://local.drizzle.studio/
+
+### Better-Auth schemas
+
+The authentication schemas for Better-Auth can be generated via: `pnpx @better-auth/cli generate`.
 
 ## Deploy on Vercel
 
