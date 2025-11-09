@@ -101,7 +101,7 @@ export default function RegisterForm() {
     <Card className="w-2/3 max-w-md">
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <CardHeader>
-          <CardTitle className="text-lg md:text-xl">Sign Up</CardTitle>
+          <CardTitle>Register</CardTitle>
           <CardDescription>
             Enter your information to create an account
           </CardDescription>

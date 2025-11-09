@@ -36,6 +36,7 @@ The following resources are helpful understanding and making better use of the u
 - [tailwindcss](https://tailwindcss.com/docs/installation/framework-guides/nextjs) - Utility-first CSS framework
 - [React Hook Form](https://react-hook-form.com/get-started) - Form validation
 - [Zod](https://zod.dev/) - Schema validation
+- [TanStack Table](https://tanstack.com/table/v8/docs/introduction) - Tables and datagrids
 
 ## Database
 

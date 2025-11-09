@@ -56,7 +56,7 @@ export default function LoginForm() {
   return (
     <Card className="w-2/3 max-w-md">
       <CardHeader>
-        <CardTitle className="text-lg md:text-xl">Sign In</CardTitle>
+        <CardTitle>Login</CardTitle>
         <CardDescription>
           Enter your email below to login to your account
         </CardDescription>

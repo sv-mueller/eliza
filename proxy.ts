@@ -16,5 +16,5 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   runtime: "nodejs",
-  matcher: ["/", "/dashboard"],
+  matcher: ["/", "/dashboard", "/account"],
 };
