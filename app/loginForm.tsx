@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -19,6 +20,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import z from "zod";
+import { LoginWithPasskeyButton } from "./login/LoginWithPasskeyButton";
 
 export default function LoginForm() {
   const [loading, setLoading] = useState(false);
@@ -111,6 +113,9 @@ export default function LoginForm() {
           {lastError && <FieldError errors={[{ message: lastError }]} />}
         </form>
       </CardContent>
+      <CardFooter>
+        <LoginWithPasskeyButton />
+      </CardFooter>
     </Card>
   );
 }

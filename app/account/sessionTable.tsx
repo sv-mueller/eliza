@@ -19,7 +19,8 @@ import {
 } from "@tanstack/react-table";
 import { Session } from "better-auth";
 import * as React from "react";
-import { RevokeOtherSessionsButton } from "./revokeAllNotActiveSessionsButton";
+import { RevokeAllSessionsButton } from "./revokeAllSessionsButton";
+import { RevokeOtherSessionsButton } from "./revokeOtherSessionsButton copy";
 import { RevokeSessionButton } from "./revokeSessionButton";
 import { TableSortButton } from "./TableSortButton";
 
@@ -171,7 +172,11 @@ export function SessionTable({ sessions }: SessionTableProps) {
           </TableBody>
         </Table>
       </div>
-      <RevokeOtherSessionsButton />
+      {sessions.some((s) => !s.isActive) ? (
+        <RevokeOtherSessionsButton />
+      ) : (
+        <RevokeAllSessionsButton />
+      )}
     </div>
   );
 }
