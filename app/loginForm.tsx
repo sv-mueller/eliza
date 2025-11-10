@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
+  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -16,13 +17,17 @@ import { signIn } from "@/lib/auth-client";
 import { loginFormSchema } from "@/zod/loginFormSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import z from "zod";
 import { LoginWithPasskeyButton } from "./login/LoginWithPasskeyButton";
 
-export default function LoginForm() {
+export type LoginFormProps = {
+  hasRegister: boolean;
+};
+export default function LoginForm({ hasRegister }: LoginFormProps) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
   const [lastError, setLastError] = useState<string>();
@@ -62,6 +67,13 @@ export default function LoginForm() {
         <CardDescription>
           Enter your email below to login to your account
         </CardDescription>
+        {hasRegister && (
+          <CardAction>
+            <Button variant="link">
+              <Link href="/register">Register</Link>
+            </Button>
+          </CardAction>
+        )}
       </CardHeader>
       <CardContent>
         <form

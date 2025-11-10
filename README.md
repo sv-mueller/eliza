@@ -37,6 +37,7 @@ The following resources are helpful understanding and making better use of the u
 - [React Hook Form](https://react-hook-form.com/get-started) - Form validation
 - [Zod](https://zod.dev/) - Schema validation
 - [TanStack Table](https://tanstack.com/table/v8/docs/introduction) - Tables and datagrids
+- [Statsig Feature Flags](https://docs.statsig.com/feature-flags/overview) - Feature Flags
 
 ## Database
 
